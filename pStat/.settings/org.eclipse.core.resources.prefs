@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//src/core/calculate.py=utf-8
+encoding//src/core/controller.py=utf-8
+encoding//src/core/parser.py=utf-8
+encoding//src/core/period/calc_period.py=utf-8
+encoding//src/core/period/p9mail.py=utf-8
+encoding//src/core/send_graphite.py=utf-8
+encoding//src/core/utils.py=utf-8
+encoding/<project>=UTF-8
