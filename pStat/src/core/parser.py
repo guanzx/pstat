@@ -70,7 +70,7 @@ class LogParser(object):
             hh = getFormatHour(hh)
             logFile = self.input_dir_day + 'access.'+ self.date_str + hh +'.log'
             if not os.path.isfile(logFile):
-                writeErrorlog(self.log_dir,logFile+"does not exists",self.date_str)
+                writeErrorlog(self.log_dir,logFile+"  does not exists",self.date_str)
                 dayScope += hh +","
             else:
                 writeStdOutLog(self.log_dir,time.ctime() + ' extracting log file ' + 'access.'+ self.date_str + hh +'.log',self.date_str)
@@ -80,7 +80,7 @@ class LogParser(object):
   
     def sortFromSmallToLarge(self):
         """ 将取出的tt/tr字段值按照从小到大的顺序进行排序，（此排序是为满足业务需求而进行的） ."""
-        writeStdOutLog( self.log_dir,time.ctime() + 'sort start.... ' ,self.date_str)
+        writeStdOutLog( self.log_dir,time.ctime() + '  sort start.... ' ,self.date_str)
         cmd = 'sort ' + self.dir_pub_tt + ' >> ' + self.tmp_dir + 'pub_tt.sort'
         os.system(cmd)
         writeStdOutLog( self.log_dir,time.ctime() + ' ' +  cmd + ' Done ' ,self.date_str)

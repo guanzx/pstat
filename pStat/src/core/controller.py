@@ -91,11 +91,15 @@ if __name__ == '__main__':
     
     # 计算性能指标
     calc = Calculate(tmp_dir,pub_count,mc_count)
+    writeStdOutLog(log_dir,time.ctime() + '  start calculate tt/tr .... ',date_str)
     pub_tt_data,pub_tt_pdata= calc.calculate_pub_tt()
     pub_tr_data,pub_tr_pdata= calc.calculate_pub_tr()
     mc_tt_data,mc_tt_pdata= calc.calculate_mc_tt()
     mc_tr_data,mc_tr_pdata= calc.calculate_mc_tr()
+    writeStdOutLog(log_dir,time.ctime() + '  finish calculate tt/tr .... ',date_str)
     
+    writeStdOutLog(log_dir,time.ctime() + '  send p-series data to graphite .... ',date_str)
     sendDataToGraphite(pub_tt_pdata,pub_tr_pdata,mc_tt_pdata,mc_tr_pdata)
+    writeStdOutLog(log_dir,time.ctime() + '  send p-series data to graphite success.... ',date_str)
     
     saveDataAsCsv(date_str,pub_count,mc_count,output_dir,pub_tt_data,pub_tr_data,mc_tt_data,mc_tr_data)

@@ -7,7 +7,6 @@ Created on 2014.8.27
 
 from graphite_client import StatsdClient
 
-
 def sendPubAndMcRequest(pub_count,mc_count):
 #     client = StatsdClient()   
 #     client.gauge('microlens.hermes.pub.request', pub_count)
