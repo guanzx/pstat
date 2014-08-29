@@ -94,3 +94,4 @@ class Calculate(object):
     def calculate_mc_tr(self):
         file_mc_tr_sort = open(self.tmp_dir + 'mc_tr.sort','r')
         return self.calculate(file_mc_tr_sort, "mc", "tr")
+
