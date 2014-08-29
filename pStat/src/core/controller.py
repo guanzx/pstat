@@ -39,6 +39,7 @@ def saveDataAsCsv(date_str,pub_count,mc_count,output_dir,pub_tt_data,pub_tr_data
     2种存储策略：(1)每月存储一个文件;(2)所有数据存储一个大文件 .
     """
     result_str = getDateStr(date_str,pub_count,mc_count,pub_tt_data,pub_tr_data,mc_tt_data,mc_tr_data)
+    makeDirIfNotExist(output_dir)
     month_stat_file_name = output_dir+"/" + get_currrent_month_str() + '.csv'
     all_stat_file_name = output_dir +"/"+ "all.csv"
     if not os.path.isfile(month_stat_file_name) :
