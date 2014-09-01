@@ -6,7 +6,7 @@ Created on 2014.8.26
 @author: guanzx
 
     设置定时任务，解析完tt/tr日志后，开始运行该脚本，每天4点执行前一天的解析好的数据
-    >>> 00 05 * * *  cd /disk11/core/; python controller.py &
+    >>> 00 04 * * *  cd /disk11/core/; python controller.py &
 '''
 
 from sys import argv,exit

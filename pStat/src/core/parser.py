@@ -6,7 +6,7 @@ Created on 2014.8.28
 
     设置专门用于解析tt/tr字段的定时任务，每小时的第10分钟解析前1小时的日志,将解析后的日志按小时存临时文件
     >>> python parser.py
-    >>> */10 * * * * cd /disk11/core/;python parser.py &
+    >>> 10 * * * * cd /disk11/core/;python parser.py &
 '''
 
 from sys import argv
