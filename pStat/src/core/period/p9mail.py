@@ -17,7 +17,7 @@ msg = ("From: %s\r\nTo: %s\r\nSubject: %s\r\n\r\n"
 
 msg += open(file_dir).read()                                                              
     
-server = smtplib.SMTP('mail.funshion.com', 25, 'muse0')
+server = smtplib.SMTP('*******', 25, '****')
 server.login(username, password)
 server.sendmail(fromaddr,toaddrs,msg)
 server.quit()            
